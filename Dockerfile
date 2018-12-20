@@ -2,18 +2,11 @@ FROM alpine:3.8
 
 MAINTAINER Thornton Phillis <thornton@xedi.com>
 
-
-
-# ENV
-
 # Files
 
 COPY resources/root /
-
-# Install Dependencies
+RUN mkdir /samba
 
 # Install CIFS
 
 RUN apk add cifs-utils
-RUN mkdir /samba
-
