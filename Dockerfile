@@ -6,6 +6,10 @@ MAINTAINER Thornton Phillis <thornton@xedi.com>
 
 # ENV
 
+# Files
+
+COPY resources/root /
+
 # Install Dependencies
 
 # Install CIFS
@@ -13,6 +17,3 @@ MAINTAINER Thornton Phillis <thornton@xedi.com>
 RUN apk add cifs-utils
 RUN mkdir /samba
 
-# Mount CIFS
-
-RUN mount -t cifs -o username=${SMB_USERNAME},password=${SMB_PASSWORD} "${SMB_SERVER}" /cifs
